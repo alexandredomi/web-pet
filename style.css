@@ -1,0 +1,573 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #183DFF;
+  color: #FFFFFF;
+  padding: 0px 10px;
+}
+body .container-menu-mobile {
+  display: flex;
+  z-index: 5;
+  position: relative;
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #183DFF;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+body .container-menu-mobile .fechar-menu {
+  position: fixed;
+  top: 0;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+body .container-menu-mobile .fechar-menu button {
+  background-color: transparent;
+  border: none;
+}
+body .container-menu-mobile .fechar-menu button i {
+  font-size: 30px;
+  color: white;
+}
+body .container-menu-mobile ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  text-align: center;
+  gap: 10px;
+}
+body .container-menu-mobile .botao-questionnarie {
+  border: solid 1px #FFFFFF;
+  color: #FFFFFF;
+  padding: 8px 20px;
+  background-color: #183DFF;
+  border-radius: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+body .container-menu-mobile .botao-questionnarie:hover {
+  background-color: #1437e4;
+}
+body .container-menu-mobile .botao-free-call {
+  border: solid 1px #FFFFFF;
+  color: #183DFF;
+  padding: 8px 20px;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+body .container-menu-mobile .botao-free-call:hover {
+  background-color: #dfdfdf;
+}
+body header .center {
+  max-width: 1280px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+body header .center .header-esquerdo {
+  display: flex;
+  align-items: center;
+}
+body header .center .header-esquerdo span {
+  font-size: 40px;
+  font-weight: 500;
+  margin-right: 30px;
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+body header .center .header-esquerdo ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+body header .center .header-esquerdo ul li {
+  color: #Aebbff;
+  cursor: pointer;
+  transition: 0.4s;
+}
+body header .center .header-esquerdo ul li:hover {
+  color: #FFFFFF;
+}
+body header .center .header-direito {
+  display: flex;
+  gap: 10px;
+}
+body header .center .header-direito .botao-questionnarie {
+  border: solid 1px #FFFFFF;
+  color: #FFFFFF;
+  padding: 8px 20px;
+  background-color: #183DFF;
+  border-radius: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+body header .center .header-direito .botao-questionnarie:hover {
+  background-color: #1437e4;
+}
+body header .center .header-direito .botao-free-call {
+  border: solid 1px #FFFFFF;
+  color: #183DFF;
+  padding: 8px 20px;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+body header .center .header-direito .botao-free-call:hover {
+  background-color: #dfdfdf;
+}
+body main {
+  width: 100%;
+}
+body main .center {
+  max-width: 1280px;
+  padding: 10px;
+  margin: 0px auto;
+}
+body main .center #home {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+body main .center #home .titulo-home {
+  width: 100%;
+  text-align: center;
+  margin: 30px 0px;
+  position: relative;
+}
+body main .center #home .titulo-home span {
+  font-size: clamp(3.5rem, 7vw, 7rem);
+  font-weight: 300;
+  font-family: "Noto Serif", serif;
+}
+body main .center #home .titulo-home p {
+  font-size: clamp(3rem, 5vw, 5rem);
+  font-weight: 600;
+}
+body main .center #home .titulo-home .links-da-pagina {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  margin: 0px auto;
+  gap: 10px;
+  background-color: #3051ff;
+  padding: 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 20px;
+}
+body main .center #home .titulo-home .links-da-pagina p {
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 300;
+}
+body main .center #home .home-img-esquerdo {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
+body main .center #home .home-img-esquerdo .img-gato-esquerdo {
+  width: 50%;
+}
+body main .center #home .home-img-esquerdo .img-gato-esquerdo img {
+  width: 100%;
+}
+body main .center #home .home-img-esquerdo .texto-gato-esquedo {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10px;
+}
+body main .center #home .home-img-esquerdo .texto-gato-esquedo .link-pagina-branco-azul {
+  position: relative;
+  background-color: #FFFFFF;
+  color: #183DFF;
+  display: flex;
+  align-items: center;
+  border-radius: 26px;
+  width: 150px;
+  height: 50px;
+  padding: 4px;
+  margin-top: 10px;
+  text-decoration: none;
+  transition: 0.4s;
+  cursor: pointer;
+}
+body main .center #home .home-img-esquerdo .texto-gato-esquedo .link-pagina-branco-azul p {
+  font-weight: 500;
+  text-align: center;
+  width: 106px;
+}
+body main .center #home .home-img-esquerdo .texto-gato-esquedo .link-pagina-branco-azul img {
+  background-color: #183DFF;
+  border-radius: 50%;
+  padding: 10px;
+  position: absolute;
+  right: 4px;
+}
+body main .center #home .home-img-esquerdo .texto-gato-esquedo .link-pagina-branco-azul:hover {
+  background-color: #dfdfdf;
+}
+body main .center #home .home-img-esquerdo .link-local {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  margin: 0px auto;
+  gap: 10px;
+  background-color: #3051ff;
+  padding: 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 20px auto 20px 0px;
+}
+body main .center #home .home-img-esquerdo .link-local p {
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 300;
+}
+body main .center #home .home-img-direito {
+  width: 50%;
+  display: flex;
+  gap: 20px;
+}
+body main .center #home .home-img-direito .img-cachorro-direito {
+  width: 50%;
+  overflow: hidden;
+}
+body main .center #home .home-img-direito .img-cachorro-direito img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body main .center #home .home-img-direito .img-gato-direito {
+  width: 50%;
+}
+body main .center #home .home-img-direito .img-gato-direito img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body main .center #home .home-img-direito .img-gato-direito .link-reviews-home {
+  position: relative;
+  background-color: #FFFFFF;
+  color: #183DFF;
+  display: flex;
+  align-items: center;
+  border-radius: 26px;
+  width: 150px;
+  height: 50px;
+  padding: 4px;
+  margin-top: 10px;
+  text-decoration: none;
+  transition: 0.4s;
+  cursor: pointer;
+}
+body main .center #home .home-img-direito .img-gato-direito .link-reviews-home p {
+  font-weight: 500;
+  text-align: center;
+  width: 106px;
+}
+body main .center #home .home-img-direito .img-gato-direito .link-reviews-home img {
+  background-color: #183DFF;
+  border-radius: 50%;
+  padding: 10px;
+  position: absolute;
+  right: 4px;
+}
+body main .center #home .home-img-direito .img-gato-direito .link-reviews-home:hover {
+  background-color: #dfdfdf;
+}
+body main .center #servicos {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  padding: 20px 20px 50px 20px;
+}
+body main .center #servicos .titulo-servicos {
+  display: flex;
+  justify-content: center;
+}
+body main .center #servicos .titulo-servicos h2 {
+  font-size: clamp(2rem, 3vw, 4rem);
+  color: black;
+  font-weight: 600;
+  max-width: 800px;
+  text-align: center;
+  margin-top: 30px;
+}
+body main .center #servicos .lista-card-servicos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: end;
+  gap: 10px;
+}
+body main .center #servicos .lista-card-servicos .card {
+  width: 390px;
+}
+body main .center #servicos .lista-card-servicos .card .img-card img {
+  width: 100%;
+  position: relative;
+  bottom: -30px;
+  left: 0px;
+  right: 0px;
+}
+body main .center #servicos .lista-card-servicos .card .descricao-card {
+  padding: 40px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: #183DFF;
+  border-radius: 0px 0px 20px 20px;
+}
+body main .center #servicos .lista-card-servicos .card .descricao-card h3 {
+  color: #FFFFFF;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 22px;
+}
+body main .center #servicos .lista-card-servicos .card .descricao-card p {
+  font-weight: 200;
+  padding-bottom: 20px;
+}
+body main .center #servicos .lista-card-servicos .card .descricao-card .btn-detalhes-card {
+  border: solid 1px #FFFFFF;
+  color: #FFFFFF;
+  padding: 8px 20px;
+  background-color: #183DFF;
+  border-radius: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+body main .center #dotores {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0px;
+  gap: 30px;
+}
+body main .center #dotores .titulo-dotores {
+  width: 100%;
+}
+body main .center #dotores .titulo-dotores h2 {
+  font-size: clamp(2rem, 3vw, 4rem);
+  color: #FFFFFF;
+  font-weight: 500;
+  max-width: 750px;
+  margin-top: 30px;
+}
+body main .center #dotores .card-dotores {
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #3051ff;
+  border-radius: 26px;
+  overflow: hidden;
+}
+body main .center #dotores .card-dotores .w50-card-dotores-esquerdo {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+}
+body main .center #dotores .card-dotores .w50-card-dotores-esquerdo p {
+  font-size: 20px;
+}
+body main .center #dotores .card-dotores .w50-card-dotores-esquerdo .links-dotores {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+body main .center #dotores .card-dotores .w50-card-dotores-esquerdo .links-dotores ul {
+  text-decoration: none;
+  list-style: none;
+}
+body main .center #dotores .card-dotores .w50-card-dotores-esquerdo .links-dotores ul li {
+  font-size: 20px;
+}
+body main .center #dotores .card-dotores .w50-card-dotores-esquerdo .links-dotores a {
+  position: relative;
+  background-color: #FFFFFF;
+  color: #183DFF;
+  display: flex;
+  align-items: center;
+  border-radius: 26px;
+  width: 150px;
+  height: 50px;
+  padding: 4px;
+  margin-top: 10px;
+  text-decoration: none;
+  transition: 0.4s;
+  cursor: pointer;
+}
+body main .center #dotores .card-dotores .w50-card-dotores-esquerdo .links-dotores a p {
+  font-weight: 500;
+  text-align: center;
+  width: 106px;
+}
+body main .center #dotores .card-dotores .w50-card-dotores-esquerdo .links-dotores a img {
+  background-color: #183DFF;
+  border-radius: 50%;
+  padding: 10px;
+  position: absolute;
+  right: 4px;
+}
+body main .center #dotores .card-dotores .w50-card-dotores-esquerdo .links-dotores a p {
+  font-size: 18px;
+}
+body main .center #dotores .card-dotores .w50-card-dotores-direito {
+  width: 50%;
+  position: relative;
+}
+body main .center #dotores .card-dotores .w50-card-dotores-direito .img-doctor {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body main .center #dotores .card-dotores .w50-card-dotores-direito a {
+  position: relative;
+  background-color: #FFFFFF;
+  color: #183DFF;
+  display: flex;
+  align-items: center;
+  border-radius: 26px;
+  width: 150px;
+  height: 50px;
+  padding: 4px;
+  margin-top: 10px;
+  text-decoration: none;
+  transition: 0.4s;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+body main .center #dotores .card-dotores .w50-card-dotores-direito a p {
+  font-weight: 500;
+  text-align: center;
+  width: 106px;
+}
+body main .center #dotores .card-dotores .w50-card-dotores-direito a img {
+  background-color: #183DFF;
+  border-radius: 50%;
+  padding: 10px;
+  position: absolute;
+  right: 4px;
+}
+body main .center #dotores .card-dotores .w50-card-dotores-direito a:hover {
+  background-color: #dfdfdf;
+}
+body main .center #equipamentos {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+body main .center #equipamentos .titulo-equipamentos {
+  width: 100%;
+}
+body main .center #equipamentos .titulo-equipamentos h2 {
+  font-size: clamp(2rem, 3vw, 4rem);
+  font-weight: 500;
+  max-width: 700px;
+}
+body main .center #equipamentos .container-cards-equipamentos {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto;
+  gap: 20px;
+}
+body main .center #equipamentos .container-cards-equipamentos .w50-card-equipamentos-link {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  background-color: #3051ff;
+  padding: 20px;
+  border-radius: 20px;
+  justify-content: space-between;
+  gap: 50px;
+}
+body main .center #equipamentos .container-cards-equipamentos .w50-card-equipamentos-link .cima {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+body main .center #equipamentos .container-cards-equipamentos .w50-card-equipamentos-link .cima p {
+  max-width: 400px;
+}
+body main .center #equipamentos .container-cards-equipamentos .w50-card-equipamentos-link .cima a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+}
+body main .center #equipamentos .container-cards-equipamentos .w50-card-equipamentos-link .cima a img {
+  width: 32px;
+}
+body main .center #equipamentos .container-cards-equipamentos .w50-card-equipamentos-link .cima a:hover {
+  background-color: #dfdfdf;
+}
+body main .center #equipamentos .container-cards-equipamentos .w50-card-equipamentos-link .baixo {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+body main .center #equipamentos .container-cards-equipamentos .w50-card-equipamentos-link .baixo p {
+  color: #Aebbff;
+}
+body main .center #equipamentos .container-cards-equipamentos .w50-card-equipamentos-img {
+  background-color: #3051ff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+body main .center #equipamentos .container-cards-equipamentos .w50-card-equipamentos-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body main .center #equipamentos .container-cards-equipamentos .w25-card-equipamentos-link {
+  grid-column: 1/2;
+  height: 20px;
+}
+body main .center #equipamentos .container-cards-equipamentos .w25-card-equipamentos-img {
+  grid-column: 2/3;
+  height: 20px;
+}
+body main .center #equipamentos .container-cards-equipamentos .w50-card-equipamentos-link-ultimo {
+  grid-column: 3/5;
+  height: 20px;
+}/*# sourceMappingURL=style.css.map */

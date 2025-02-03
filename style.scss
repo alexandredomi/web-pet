@@ -1,0 +1,408 @@
+@import '_variaveis';
+@import '_mixins';
+@import '_reset';
+
+body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: $primary;
+    color: $branco;
+    padding: 0px 10px;
+    .container-menu-mobile{
+        display: flex;
+        z-index: 5;
+        position: relative;
+        position: absolute;
+        width: 100%;
+        min-height: 100vh;
+        top: 0;
+        left: 0;
+        background-color: $primary;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        .fechar-menu{
+            position: fixed;
+            top: 0;
+            padding: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: end;
+            button{
+                background-color: transparent;
+                border: none;
+                i{
+                    font-size: 30px;
+                    color: white;
+                }
+            }
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            text-align: center;
+            gap: 10px;
+        }
+        .botao-questionnarie{
+            @include botao-azul;
+
+            &:hover{
+                @include botao-azul-hover;
+            }
+        }
+        .botao-free-call{
+            @include botao-branco;
+
+            &:hover{
+                @include botao-branco-hover;
+            }
+        }
+    }
+    header{
+        .center{
+            max-width: 1280px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            .header-esquerdo{
+                display: flex;
+                align-items: center;
+                span{
+                    font-size: 40px;
+                    font-weight: 500;
+                    margin-right: 30px;
+                    font-family: "Noto Serif", serif;
+                    font-optical-sizing: auto;
+                    font-style: normal;
+                }
+                ul{
+                    display: flex;
+                    list-style: none;
+                    gap: 20px;
+                    li{
+                        color: $secundary;
+                        cursor: pointer;
+                        transition: 0.4s;
+                    }
+                    li:hover{
+                        color: $branco;
+                    }
+                }    
+            }
+            .header-direito{
+                display: flex;
+                gap: 10px;
+                .botao-questionnarie{
+                    @include botao-azul;
+    
+                    &:hover{
+                        @include botao-azul-hover;
+                    }
+                }
+                
+                .botao-free-call{
+                    @include botao-branco;
+    
+                    &:hover{
+                        @include botao-branco-hover;
+                    }
+                }
+            }
+        }
+    }
+    main{
+        width: 100%;
+        .center{
+            max-width: 1280px;
+            padding: 10px;
+            margin: 0px auto;
+            #home{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                .titulo-home{
+                    width: 100%;
+                    text-align: center;
+                    margin: 30px 0px;
+                    position: relative;
+                    span{
+                        font-size: clamp(3.5rem, 7vw, 7rem);
+                        font-weight: 300;
+                        font-family: "Noto Serif", serif;
+                    }
+                    p{
+                        font-size: clamp(3rem, 5vw, 5rem);
+                        font-weight: 600;
+                    }
+                    .links-da-pagina{
+                        @include link-bg-azul;
+                        margin-top: 20px;
+                    }
+                }
+                .home-img-esquerdo{
+                    width: 50%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    .img-gato-esquerdo{
+                        width: 50%;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    .texto-gato-esquedo{
+                        width: 50%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        padding-left: 10px;
+                        .link-pagina-branco-azul{
+                            @include link-pagina-branco-com-azul;
+                            &:hover{
+                                @include link-pagina-branco-com-azul-hover;
+                            }
+                        }
+                    }
+                    .link-local{
+                        @include link-bg-azul;
+                        margin: 20px auto 20px 0px;
+                    }
+                }
+                .home-img-direito{
+                    width: 50%;
+                    display: flex;
+                    gap: 20px;
+                    .img-cachorro-direito{
+                        width: 50%;
+                        overflow: hidden;
+                        img{
+                            object-fit: contain;
+                        }
+                    }
+                    .img-gato-direito{
+                        width: 50%;
+                        img{
+                            object-fit: contain;
+                        }
+                        .link-reviews-home{
+                            @include link-pagina-branco-com-azul;
+                            &:hover{
+                                @include link-pagina-branco-com-azul-hover;
+                            }
+                        }
+                    }
+                }
+            }
+            #servicos{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                background-color: $branco;
+                border-radius: 20px;
+                padding: 20px 20px 50px 20px;
+                .titulo-servicos{
+                    display: flex;
+                    justify-content: center;
+                    h2{
+                        font-size: clamp(2rem, 3vw, 4rem);
+                        color: $preto;
+                        font-weight: 600;
+                        max-width: 800px;
+                        text-align: center;
+                        margin-top: 30px;
+                    }
+                }
+                .lista-card-servicos{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                    align-items: end;
+                    gap: 10px;
+                    .card{
+                        width: 390px;
+                        .img-card{
+                            img{
+                                width: 100%;
+                                position: relative;
+                                bottom: -30px;
+                                left: 0px;
+                                right: 0px;
+                            }
+                        }
+                        .descricao-card{ 
+                            padding: 40px 20px 20px 20px;
+                            display: flex;
+                            flex-direction: column;
+                            background-color: $primary;
+                            border-radius: 0px 0px 20px 20px;
+                                h3{
+                                    color: $branco;
+                                    margin-bottom: 10px;
+                                    font-weight: 400;
+                                    font-size: 22px;
+                                }
+                                p{
+                                    font-weight: 200;
+                                    padding-bottom: 20px;
+                                }
+                                .btn-detalhes-card{
+                                    @include botao-azul;
+                                }                        
+                        }
+                    }
+                }
+            }
+            #dotores{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                padding: 40px 0px;
+                gap: 30px;
+                .titulo-dotores{
+                    width: 100%;
+                    h2{
+                        font-size: clamp(2rem, 3vw, 4rem);
+                        color: $branco;
+                        font-weight: 500;
+                        max-width: 750px;
+                        margin-top: 30px;
+                    }
+                }
+                .card-dotores{
+                    max-width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    background-color: $gb-links;
+                    border-radius: 26px;
+                    overflow: hidden;
+                    .w50-card-dotores-esquerdo{
+                        width: 50%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        padding: 40px;
+                        p{
+                            font-size: 20px;
+                        }
+                        .links-dotores{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: end;
+                            ul{
+                                text-decoration: none;
+                                list-style: none;
+                                li{
+                                    font-size: 20px;
+                                }
+                            }
+                            a{
+                               @include link-pagina-branco-com-azul;
+                               p{
+                                font-size: 18px;
+                               }
+                            }
+                        } 
+                    }
+                    .w50-card-dotores-direito{
+                        width: 50%;
+                        position: relative;
+                                                
+                        .img-doctor{
+                            //object-fit: cover;
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                        a{
+                            @include link-pagina-branco-com-azul;
+                            position: absolute;
+                            top: 20px;
+                            right: 30px;
+                            &:hover{
+                                @include link-pagina-branco-com-azul-hover;
+                            }
+                        }
+                    }
+                }
+            }
+            #equipamentos{
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+                .titulo-equipamentos{
+                    width: 100%;
+                    h2{
+                        font-size: clamp(2rem, 3vw, 4rem);
+                        font-weight: 500;
+                        max-width: 700px;
+                    }
+                }
+                .container-cards-equipamentos{
+                    display: grid;
+                    grid-template-columns: 50% 50%; 
+                    grid-template-rows: auto auto;
+                    gap: 20px;
+                    .w50-card-equipamentos-link{
+                        display: flex;
+                        flex-direction: column;
+                        font-size: 20px;
+                        background-color: $gb-links;
+                        padding: 20px;
+                        border-radius: 20px;
+                        justify-content: space-between;
+                        gap: 50px;
+                        .cima{
+                            display: flex;
+                            justify-content: space-between;
+                            gap: 40px;
+                            p{
+                                max-width: 400px;
+                            }
+                            a{
+                                @include link-bola-branca;
+                                &:hover{
+                                    @include link-bola-branca-hover;
+                                }
+                            }
+                        }
+                        .baixo{
+                            display: flex;
+                            justify-content: end;
+                            align-items: end;
+                            p{
+                                color: $secundary;
+                            }
+                        }
+                    }
+                    .w50-card-equipamentos-img{
+                        background-color: $gb-links;
+                        border-radius: 20px;
+                        overflow: hidden;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    .w25-card-equipamentos-link{
+                        grid-column: 1 / 2;
+                        height: 20px;
+                    }
+                    .w25-card-equipamentos-img{
+                        grid-column: 2 / 3;
+                        height: 20px;
+                    }
+                    .w50-card-equipamentos-link-ultimo{
+                        grid-column: 3 / 5;
+                        height: 20px;
+                    }
+                }
+            } 
+        }
+    }
+}
