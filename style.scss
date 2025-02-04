@@ -10,7 +10,7 @@ body{
     color: $branco;
     padding: 0px 10px;
     .container-menu-mobile{
-        display: flex;
+        display: none;
         z-index: 5;
         position: relative;
         position: absolute;
@@ -34,6 +34,7 @@ body{
             button{
                 background-color: transparent;
                 border: none;
+                cursor: pointer;
                 i{
                     font-size: 30px;
                     color: white;
@@ -114,6 +115,18 @@ body{
                     }
                 }
             }
+            #btnAbrirMenu{
+                display: none;
+                justify-content: center;
+                background-color: transparent;
+                border: none;
+                width: 30px;
+                i{
+                    font-size: 30px;
+                    color: $branco;
+                }
+            }
+
         }
     }
     main{
@@ -132,12 +145,12 @@ body{
                     margin: 30px 0px;
                     position: relative;
                     span{
-                        font-size: clamp(3.5rem, 7vw, 7rem);
+                        font-size: clamp(3rem, 7vw, 5rem);
                         font-weight: 300;
                         font-family: "Noto Serif", serif;
                     }
                     p{
-                        font-size: clamp(3rem, 5vw, 5rem);
+                        font-size: clamp(2rem, 5vw, 4rem);
                         font-weight: 600;
                     }
                     .links-da-pagina{
@@ -403,6 +416,59 @@ body{
                     }
                 }
             } 
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body{
+        header{
+            .center{
+                margin: 0;
+                .header-esquerdo{
+                    ul{
+                        display: none;
+                    }
+                    
+                }
+                .header-direito{
+                    display: none;
+                }
+                #btnAbrirMenu{
+                    display: flex;
+                } 
+            }
+        }
+        main{
+            .center{
+                #home{
+                    flex-direction: column;
+                    .home-img-esquerdo{
+                        width: 100%;
+                        
+                    }
+                    .home-img-direito{
+                        width: 100%;
+                        flex-wrap: wrap;
+                        .img-cachorro-direito{
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            text-align: center;
+                            gap: 30px;
+                        }
+                        .img-gato-direito{
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            gap: 20px;
+                            margin-bottom: 30px;
+                        }
+                    } 
+                }    
+            }
         }
     }
 }

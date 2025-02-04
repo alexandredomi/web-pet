@@ -16,7 +16,7 @@ body {
   padding: 0px 10px;
 }
 body .container-menu-mobile {
-  display: flex;
+  display: none;
   z-index: 5;
   position: relative;
   position: absolute;
@@ -42,6 +42,7 @@ body .container-menu-mobile .fechar-menu {
 body .container-menu-mobile .fechar-menu button {
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 body .container-menu-mobile .fechar-menu button i {
   font-size: 30px;
@@ -139,6 +140,17 @@ body header .center .header-direito .botao-free-call {
 body header .center .header-direito .botao-free-call:hover {
   background-color: #dfdfdf;
 }
+body header .center #btnAbrirMenu {
+  display: none;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  width: 30px;
+}
+body header .center #btnAbrirMenu i {
+  font-size: 30px;
+  color: #FFFFFF;
+}
 body main {
   width: 100%;
 }
@@ -159,12 +171,12 @@ body main .center #home .titulo-home {
   position: relative;
 }
 body main .center #home .titulo-home span {
-  font-size: clamp(3.5rem, 7vw, 7rem);
+  font-size: clamp(3rem, 7vw, 5rem);
   font-weight: 300;
   font-family: "Noto Serif", serif;
 }
 body main .center #home .titulo-home p {
-  font-size: clamp(3rem, 5vw, 5rem);
+  font-size: clamp(2rem, 5vw, 4rem);
   font-weight: 600;
 }
 body main .center #home .titulo-home .links-da-pagina {
@@ -570,4 +582,45 @@ body main .center #equipamentos .container-cards-equipamentos .w25-card-equipame
 body main .center #equipamentos .container-cards-equipamentos .w50-card-equipamentos-link-ultimo {
   grid-column: 3/5;
   height: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  body header .center {
+    margin: 0;
+  }
+  body header .center .header-esquerdo ul {
+    display: none;
+  }
+  body header .center .header-direito {
+    display: none;
+  }
+  body header .center #btnAbrirMenu {
+    display: flex;
+  }
+  body main .center #home {
+    flex-direction: column;
+  }
+  body main .center #home .home-img-esquerdo {
+    width: 100%;
+  }
+  body main .center #home .home-img-direito {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  body main .center #home .home-img-direito .img-cachorro-direito {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+  body main .center #home .home-img-direito .img-gato-direito {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
 }/*# sourceMappingURL=style.css.map */
